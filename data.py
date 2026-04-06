@@ -98,9 +98,9 @@ class HistoricalCSVDataHandler(DataHandler):
                     csv_path, 
                     header=0, 
                     index_col=0, 
-                    parse_dates=True,
-                    names=['datetime', 'open', 'high', 'low', 'close', 'adj_close', 'volume']
+                    parse_dates=True
                 )
+                self.symbol_data[s].columns = [col.lower() for col in self.symbol_data[s].columns]
                 self.symbol_data[s].sort_index(inplace=True)
 
                 # Unificamos índices de todos los activos para alinear barras
