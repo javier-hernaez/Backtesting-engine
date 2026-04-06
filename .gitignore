@@ -41,3 +41,4 @@ ENV/
 # Funciones de OS
 Thumbs.db
 .DS_Store
+data/
